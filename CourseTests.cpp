@@ -2,6 +2,7 @@
 
 int main(int argc, char* argv[]) {
     printf("[MAIN] Hello from main.\n");
-    Arrays::RunTest();
+    arrays::runTest();
+    
     return 0;
 }
