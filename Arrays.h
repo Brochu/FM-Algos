@@ -5,21 +5,21 @@
 
 namespace arrays {
 
-    void printArray(std::span<short> arr) {
+    inline void print_array(std::span<short> arr) {
         for (const auto& val : arr) {
             printf("[ARRAY] value -> %i\n", val);
         }
         printf("[ARRAY] -----------------\n");
     }
     
-    void runTest() {
+    inline void run_test() {
         printf("[ARRAY] Running array tests\n");
 
         std::array<short, 6> arr {0, 1, 2, 3, 4, 5};
-        printf("[ARRAY] New std::array at %p\n", (void*)arr.data());
-        printArray(arr);
+        printf("[ARRAY] New std::array at %p\n", static_cast<void*>(arr.data()));
+        print_array(arr);
         arr[2] *= 2;
-        printArray(arr);
+        print_array(arr);
     }
     
 }
