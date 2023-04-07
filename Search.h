@@ -4,7 +4,7 @@
 #include <array>
 #include <span>
 
-namespace sorting {
+namespace search {
 
     inline bool binary_search(std::span<int> arr, size_t lo, size_t hi, int val) {
         do
@@ -22,10 +22,10 @@ namespace sorting {
     }
     
     inline void run_test() {
-        printf("[SORT] Running sorting tests\n");
+        printf("[SEARCH] Running searches tests\n");
         std::array<int, 10> arr {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        const bool res = binary_search(arr, 0, arr.size(), 10);
+        const bool res = binary_search(arr, 0, arr.size(), 7);
         printf("Found the value? %s\n", res ? "YES" : "NO");
     }
     
